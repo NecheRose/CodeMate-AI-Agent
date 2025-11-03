@@ -13,7 +13,7 @@
       "position": [500, 100],
       "type": "a2a/mastra-a2a-node",
       "typeVersion": 1,
-      "url": "https://your-live-url" 
+      "url": "https://codemate-ai-agent.up.railway.app" 
     }
   ],
   "settings": {
