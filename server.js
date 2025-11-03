@@ -54,7 +54,7 @@ app.post('/a2a/agent/codeMateAgent', async (req, res) => {
     
     const a2aResponse = {
       jsonrpc: '2.0',
-      id: agentRequest.id, // CRITICAL: Must match the request ID
+      id: agentRequest.id, // Must match the request ID
       result: {
         message: {
           // Use the original IDs to maintain context, but a new messageId for the response
@@ -67,12 +67,12 @@ app.post('/a2a/agent/codeMateAgent', async (req, res) => {
       },
     };
 
-    // 4. Send back the valid JSON-RPC 2.0 response
+    // Send back the valid JSON-RPC 2.0 response
     res.status(200).json(a2aResponse);
 
   } catch (error) {
     console.error('Agent execution error:', error.message);
-    // 5. Proper error response in A2A format
+    // Proper error response in A2A format
     res.status(500).json({
       jsonrpc: '2.0',
       id: agentRequest.id,
@@ -81,7 +81,11 @@ app.post('/a2a/agent/codeMateAgent', async (req, res) => {
   }
 });
 
+// Health endpoint
+app.get("/", (req, res) => {
+  res.send("Welcome to my server!");
+});
+
 app.listen(PORT, () => {
   console.log(`CodeMate Agent server running on http://localhost:${PORT}`);
-  console.log(`Ready to receive A2A requests at: /a2a/agent/codeMateAgent`);
 });
