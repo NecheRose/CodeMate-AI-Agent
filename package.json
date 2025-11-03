@@ -1,0 +1,27 @@
+{
+  "name": "codemate-ai-agent",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "",
+  "dependencies": {
+    "@ai-sdk/openai": "^2.0.60",
+    "@mastra/core": "^0.23.3",
+    "axios": "^1.13.1",
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mastra": "^0.17.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

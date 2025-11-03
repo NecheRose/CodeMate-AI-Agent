@@ -1,0 +1,23 @@
+{
+  "active": true,
+  "category": "utilities",
+  "description": "CodeMate Agent — helps you write, debug, and refactor code.",
+  "id": "codemate-ai-agent",
+  "long_description": "An AI code assistant that integrates with Telex to help developers write and debug code snippets using Mastra and OpenAI.",
+  "name": "codemate agent",
+  "nodes": [
+    {
+      "id": "codemate_node",
+      "name": "codemate-agent",
+      "parameters": {},
+      "position": [500, 100],
+      "type": "a2a/mastra-a2a-node",
+      "typeVersion": 1,
+      "url": "https://your-live-url" 
+    }
+  ],
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "short_description": "Generate, fix, and refactor code using AI."
+}
